@@ -7,6 +7,29 @@
 // 7. increment decrement operator
 
 
+class operator3{
+    public static void main(String args[]){
+        // int a = 5;
+        // int b = 2;
+        // int c = (a>b)? a : b;
+        // System.out.println("max is :"+c);
+
+        int p = 43;
+        int q = 93;
+        int r = 23;
+        int res;
+        res = (p>q)? ((p>r) ? p :r) : ((q>r) ? q : r);
+        System.out.println("result is :"+res);
+    }
+}
+
+
+
+
+
+
+
+
  //ARITHMETIC OPERATOR
 //  class operator1{
 //      public static void main(String ajhd[]){
@@ -39,8 +62,8 @@
 //  }
 
 
- class operator2{
-    public static void main(String []args){
+//  class operator2{
+//     public static void main(String []args){
        //RELATIONAL OPERATOR(return boolean value) 
          // int A = 10;
          // int B = 23;
@@ -49,8 +72,8 @@
 
 
         //LOGICAL OPERATOR
-          int x = 5;
-          int y = 2;
+        //   int x = 5;
+        //   int y = 2;
         //   boolean z = ( x > y ) && ( x != y );  // 5 > 2 && 5 != 2 => true  && true => true
         //   System.out.println("result is :"+z); // true
         
@@ -64,13 +87,13 @@
         //   System.out.println(x == y && x-- > --y); // 5 == 2 => false(second condition not check)
  
         
-          System.out.println(x == y || ++x < 3); // false
-          System.out.println(x); //6
+//           System.out.println(x == y || ++x < 3); // false
+//           System.out.println(x); //6
 
-          System.out.println(x != y || ++x < 3); //true
-          System.out.println(x); //6
-    }
- }
+//           System.out.println(x != y || ++x < 3); //true
+//           System.out.println(x); //6
+//     }
+//  }
 
 
 
