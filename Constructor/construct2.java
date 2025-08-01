@@ -1,3 +1,4 @@
+package Constructor;
 class A {
     A() {
         this(10, "ritu");

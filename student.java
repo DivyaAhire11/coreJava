@@ -1,4 +1,4 @@
-public class student {
+ class  Student {
     private int rollNo;
     private String name;
     private float mks;
@@ -33,9 +33,9 @@ class employee {
 
 class Teststud {
     public static void main(String[] args) {
-        student st1 = new student();
-        student st2 = new student();
-        student st3 = new student();
+        Student st1 = new Student();
+        Student st2 = new Student();
+        Student st3 = new Student();
         // ob.rollNo=111; //error bcs (private can't access)
 
         st1.setInfo(111, "Naman", 94.60f);
