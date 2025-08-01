@@ -3,10 +3,18 @@ class student {
   private float mks;
   private int roll;
 
-  student(){
-    name = "hello";
-    roll = 50;
-    mks = 35.50f;
+  student(){}
+  student(String n){
+    name = n;
+  }
+  student(int x,float y){
+    roll = x;
+    mks = y;
+  }
+  student(int x,float y , String z){
+    name = z;
+    roll = x;
+    mks = y;
   }
 
   public void display(){
@@ -18,6 +26,15 @@ class student {
 class testStudent{
   public static void main(String[] args) {
      student ob = new student();
-     ob.display();
+     student ob1 = new student("srk");
+     student ob2 = new student(72,83.83f);
+     student ob3 = new student(72,38.39f,"pinki");
+  
+    ob.display();
+    ob1.display();
+    ob2.display();
+    ob3.display();
+    
   }
-}
+  }
+ 
