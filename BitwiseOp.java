@@ -1,3 +1,4 @@
+
 //BITWISE OERATOR
 class operator5{
      public static void main(String agrs[]){

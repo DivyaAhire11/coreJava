@@ -1,4 +1,4 @@
-//RELATIONAL OPERATOR(return boolean value) 
+
 
 
 class operator2{

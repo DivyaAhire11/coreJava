@@ -1,10 +1,4 @@
-// 1. logical operator
-// 2. arithmetic operator
-// 3. relational operator
-// 4. bitwise operator
-// 5. assignment operator
-// 6. ternary operator
-// 7. increment decrement operator
+
 
 
  //ARITHMETIC OPERATOR
