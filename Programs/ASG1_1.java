@@ -34,13 +34,15 @@ public class ASG1{
 
             case 3 : System.out.print("Enter Number : ");
                     int no = Integer.parseInt(br.readLine());
+                   
                     int num, rem,result =0;
-                    int numDigits = String.valueOf(no).length();
-                   num = no;
-                    while(num != 0){
-                        rem = num %10;;
-                        result += Math.pow(rem,numDigits);
-                        num /= 10;
+                    int numDigits = String.valueOf(no).length(); //find lenght
+                   
+                    num = no; 
+                    while(num != 0){  //2
+                        rem = num %10;  //unit place=2
+                        result += Math.pow(rem , numDigits);
+                        num /= 10; 
                     }
                     if(result == no)
                        System.out.println(no +" is an Armstrong number");
