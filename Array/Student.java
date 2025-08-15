@@ -9,7 +9,7 @@ public class Student {
         name = n;
         mks = m;
     }
-
+    
     public void display(){
         System.out.println("ROLL : "+roll);
         System.out.println("NAME : "+name);
@@ -20,7 +20,7 @@ class Stud{
     public static void main(String[] args) {
        Student s[] = new Student[5];
        for(int i = 0 ; i<s.length ; i++){
-          s[i] = new Student(); 
+          s[i] = new Student(); //array of an object
        }
        s[0].setStud(11, "abcd", 90.8f);
        s[1].setStud(22, "pqr", 80.8f);

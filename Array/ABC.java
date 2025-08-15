@@ -8,8 +8,7 @@ class ABC{
         a = x;
         b= y;
         c = z;
-       
-    }
+     }
 
     void m1(){
         System.out.println(a);
@@ -32,6 +31,6 @@ class testABC{
          ob.m1();
          ob1.m1();
          ob2.m1();
-         ABC.m2();
+         ABC.m2(); //Invoked static method by ClassName
     }
 }

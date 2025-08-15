@@ -23,11 +23,17 @@ class MyDate{
       sfd = new SimpleDateFormat("MM-dd-yyyy");
       System.out.println("current date is : "+ sfd.format(d));
 
+      sfd= new SimpleDateFormat("EEEEEE MMMM dd yyyy");
+      System.out.println("current date is :"+ sfd.format(d));
+
       sfd= new SimpleDateFormat("EEEE MMMM dd yyyy");
       System.out.println("current date is :"+ sfd.format(d));
   
       sfd = new SimpleDateFormat("EEE MMMM dd hh:mm:ss z yyyy");
       System.out.println("current date and time is :"+ sfd.format(d));
+
+      sfd= new SimpleDateFormat("E MMMM dd HH:mm:ss z yyyy");
+      System.out.println("current date is :"+ sfd.format(d));
 
       sfd = new SimpleDateFormat("dd/MM/yy hh:mm:ss aa z");
       System.out.println("current date and time is :"+ sfd.format(d));
