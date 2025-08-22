@@ -25,32 +25,42 @@ class testInfo{
         String al;
         float d;
 
-        System.out.print("Enter Flight Number :");
-        fn = Integer.parseInt(br.readLine()); 
+        // System.out.print("Enter Flight Number :");
+        // fn = Integer.parseInt(br.readLine()); 
 
-        System.out.print("Enter AirLine : ");
-        al = br.readLine(); 
+        // System.out.print("Enter AirLine : ");
+        // al = br.readLine(); 
 
-        System.out.print("Enter Duration : ");
-        d = Float.parseFloat(br.readLine());
+        // System.out.print("Enter Duration : ");
+        // d = Float.parseFloat(br.readLine());
 
-        Info ob1 = new Info(fn,al,d);
-        ob1.display();
-
-
-        System.out.print("Enter Flight Number :");
-        fn = Integer.parseInt(br.readLine()); 
-
-        System.out.print("Enter AirLine : ");
-        al = br.readLine(); 
-
-        System.out.print("Enter Duration : ");
-        d = Float.parseFloat(br.readLine());
-
-        Info ob2 = new Info(fn,al,d);
-        ob2.display();
+        // Info ob1 = new Info(fn,al,d);
+        // ob1.display();
 
 
+         int n,i;
+         System.out.print("Enter How many Flights : ");
+         n = Integer.parseInt(br.readLine());
+         Info[] a = new Info[n];
+
+         for(i=0;i<a.length;i++){
+            System.out.print("Enter Flight Number :");
+            fn = Integer.parseInt(br.readLine()); 
+
+            System.out.print("Enter AirLine : ");
+            al = br.readLine(); 
+
+            System.out.print("Enter Duration : ");
+            d = Float.parseFloat(br.readLine());
+
+            a[i] = new Info(fn,al,d);       
+            }
+
+        System.out.println("All Info About Fligts Are Follow");
+        System.out.println("FLIGHT\t\tAIRLINE\t\tDURATION");
+        for(Info t : a){
+            t.display();
+        }
         }catch(IOException e){ }
      }
 }
