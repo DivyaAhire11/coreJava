@@ -8,18 +8,21 @@ class Flight{
 
    public void accept(){
         BufferedReader b = new BufferedReader(new InputStreamReader(System.in));
+        //Scanner sc = new Scanner(System.in);
         try{
 
         System.out.print("Enter Flight Number :");
-        FlightNo = Integer.parseInt(b.readLine());
+        FlightNo = Integer.parseInt(b.readLine()); //FlightNo = sc.nextInt();
 
         System.out.print("Enter AirLine : ");
-        airline = b.readLine();
+        airline = b.readLine(); //airline = sc.next();
 
         System.out.print("Enter Duration : ");
-        duration = Float.parseFloat(b.readLine());
+        duration = Float.parseFloat(b.readLine()); //duration = sc.nextFloat();
 
-         }catch(IOException e){  }
+         }catch(IOException e){ 
+            System.out.println("problem handle");
+          }
         
 
    }
