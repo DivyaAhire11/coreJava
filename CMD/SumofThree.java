@@ -33,7 +33,7 @@ class SumofThree{
         }
 
         int ans = a+b+c;
-        System.out.println("Sun of "+a+" + "+b+" + "+c+" is :"+ans);
+        System.out.println("Sum of "+a+" + "+b+" + "+c+" is :"+ans);
 
        }catch(Exception e){
         System.out.println("Something happened,Enter Valid Input");
