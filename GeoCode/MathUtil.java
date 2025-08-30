@@ -77,7 +77,7 @@ class static Triangle{
    
 }
 
-class static Cube(){
+class static Cube{
      private int a;
      private int SA;
      private int volume;
@@ -102,7 +102,7 @@ class static Cube(){
      }
 }
 
-class static Cuboid(){
+class static Cuboid{
     private int l;
     private int b;
     private int h;
@@ -128,5 +128,38 @@ class static Cuboid(){
         System.out.println("Area of Square :"+SA);
         System.out.println("Perimeter of Square :"+volume);
         System.out.println("Diagonal of Square :"+diagonal);
+     }
+}
+
+class static Cone{
+    //slant heigth : slH
+    //Curved surface area : csa
+    //total surface area : tsa
+    private int r;
+    private int h;
+    private static float slH;
+    private float csa;
+    private float tsa;
+    private float vol;
+
+    public Cone(int r,int h){
+        this.r = r;
+        this.h = h;
+        slH = Math.sqrt(r*r + h*h);
+    }
+    public void CSA(){
+        csa = 3.14f * r * slH;
+    }
+    public void TSA(){
+        tsa = 3.14f * r *(slH + r);
+    }
+    public void volume(){
+        vol = (1/3)* 3.14f * r * r * h;
+    }
+
+    public void display(){
+        System.out.println("Curved Surface Area of cone :"+csa);
+        System.out.println("Total surface area of cone  :"+tsa);
+        System.out.println("Volume of Cone :"+vol);
      }
 }
