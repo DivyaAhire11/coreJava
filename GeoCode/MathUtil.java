@@ -78,7 +78,7 @@ class Triangle {
 
 class Cube {
     private int a;
-    private int SA;
+    private int SA; //surface area
     private int volume;
     private double diagonal;
 
@@ -106,19 +106,23 @@ class Cube {
 }
 
 class Cuboid {
-    private int l;
-    private int b;
-    private int h;
-    private int SA;
+    private int l; //length
+    private int b; //breath
+    private int h; //height
+    private int SA; //Surface Area
     private int volume;
     private double diagonal;
 
-    public Cuboid(int l, int b, int h) {
-        this.l = l;
-        this.b = b;
-        this.h = h;
+    public void accept() {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter lenght :");
+            l = sc.nextInt();
+            System.out.print("Enter breath :");
+            b = sc.nextInt();
+            System.out.print("Enter height :");
+            h = sc.nextInt();
     }
-
+    
     public void surfaceArea() {
         SA = 2 * (l * b + b * h + h * l);
     }
@@ -139,12 +143,12 @@ class Cuboid {
 }
 
 class Cone {
-    private int r;
-    private int h;
-    private double slH;
-    private double csa;
-    private double tsa;
-    private double vol;
+    private int r; //radius
+    private int h; //height
+    private double slH; //slant height
+    private double csa; //Curved surface area
+    private double tsa; //total surface area
+    private double vol; //volume
 
     public Cone(int r, int h) {
         this.r = r;
