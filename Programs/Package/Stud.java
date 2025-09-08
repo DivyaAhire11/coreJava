@@ -68,4 +68,7 @@ public class Stud{
 
    }
    
-}      
+} 
+//RUN     
+//C:\Users\DELL-PC\Desktop\CoreJava\Programs> javac Package\Stud.java
+//C:\Users\DELL-PC\Desktop\CoreJava\Programs> java Package.Stud
