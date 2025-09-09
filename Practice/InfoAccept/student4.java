@@ -55,6 +55,16 @@ class Student{
         }
         return loc;
     }
+
+    public static float Topper(Student st[]){
+        int loc = -1;
+        float max = st[0].avg;
+        for(Student t : st){
+            if(max < t.avg)
+               max = t.avg;
+        }
+        return max;
+    }
 }
 
 class TestMyStudent{
@@ -86,6 +96,15 @@ class TestMyStudent{
         }else{
             st[l].display();
         }
+
+  
+        float topper;
+        topper = Student.Topper(st);
+        System.out.println("\n\n------TOPER -----");
+        
+        st[topper].display();
+
+
         sc.close();
    }
 }
