@@ -10,10 +10,11 @@ class Student{
     public Student(){
         roll = 0;
         name = "unknown";
-        total = 0.0f;
+        total_marks = 0.0f;
         num_subjects = 1;
         avg = total_marks / num_subjects;  
     }
+
     public Student(int roll,String name,float total_marks,int num_subjects){
         this.roll = roll;
         this.name = name;
@@ -37,7 +38,7 @@ class Student{
         this.avg = this.total_marks / this.num_subjects;
     }
     public void display(){
-          System.out.print(roll +"\t\t"+ name +"\t\t"+ avg);
+          System.out.println(roll +"\t\t"+ name +"\t\t"+ avg);
     }
 
     public String toString(){
@@ -45,9 +46,17 @@ class Student{
     }
 
     public static int searchStudent(Student st[],int x){
-        
+        int loc = -1,flag = 0;
+        for(int i=0;i<st.length;i++){
+            if(st[i].roll == x){
+                loc = i;
+                break;
+            }
+        }
+        return loc;
     }
 }
+
 class TestMyStudent{
    public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
@@ -60,11 +69,23 @@ class TestMyStudent{
             st[i].accept();
         }
 
-        System.out.print("Student Information are as Follow");
-        for(i=0;i<st.length;i++){
-            st[i].display();
+        System.out.println("\nStudent Information are as Follow");
+        for(Student t : st){
+            // t.display();
+            System.out.println(t);
         }
+        
+        int x;
+        System.out.print("\nEnter Roll No To be Searched :");
+        x = sc.nextInt();
 
-
+        int l;
+        l = Student.searchStudent(st,x);
+        if(l == -1){
+            System.out.println("\nStudent Having Roll Num "+x+" Not Found");
+        }else{
+            st[l].display();
+        }
+        sc.close();
    }
 }
