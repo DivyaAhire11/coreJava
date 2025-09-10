@@ -2,6 +2,8 @@
 1.Static variable value :7
 2.Static Block
 3.Main method Entry point
+
+       *** when Object is Created ***
 4.Instance variable value :hello
 5.Init Block
 6.Constructor
