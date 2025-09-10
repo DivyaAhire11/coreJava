@@ -1,4 +1,6 @@
-import java.util.Scanner;
+// import java.util.Scanner;
+// import java.util.Arrays;
+import java.util.*;
 
 class Student{
     private int roll;
@@ -59,26 +61,37 @@ class Student{
         return loc;
     }
 
-    public static int Topper(Student st[]){
-        int loc = -1;
+    public static int topper(Student st[]){
+        int loc = 0;
         float max = st[0].avg;
-        for(Student t : st){
-            if(max < t.avg){
-               max = t.avg;
-               loc = t.roll;
+       for(int i=0;i< st.length;i++){
+            if(st[i].avg > max){
+               max = st[i].avg;
+               loc = i;
             }
         }
         return loc;
     }
 
-    public static void TotalStudent(Student st[]){
-        System.out.println("Total Students Of A Class is :"+count);
+    public static void totalStudent(Student st[]){
+        System.out.println("Total Students Of Class is :"+count);
     }
  
+    public static void sortStudent(Student st[]){
+        Arrays.sort(st ,Comparator.comparing(s->s.name));
+        for(Student s: st){
+            System.out.println(s);
+        }
+    }
+    
+   public static void convert(Student st[]){
+    for(Student t : st){
+        if (t.name.length() > 0) 
+            t.name = t.name.substring(0,1).toUpperCase() + t.name.substring(1).toLowerCase();
+      }
+   }
+
  }
-
-
-
 
 class TestMyStudent{
    public static void main(String args[]){
@@ -110,20 +123,26 @@ class TestMyStudent{
             st[l].display();
         }
 
-        System.out.print("\nHey! You Want To see Topper Of Class (y/n) : ");
+        System.out.print("\nHeyyy!\n 1. You Want To see Topper Of Class \n 2. Total Number of Students \n 3. Sort Students By its Name \n And Capitalized names (y/n) : ");
         String say = sc.next();
 
         if(say.equalsIgnoreCase("y")){
-            int topperIdx = Student.Topper(st);
-            int tpr = Student.searchStudent(st,topperIdx);
+            int topperIdx = Student.topper(st);
             System.out.println("\n\n------ClASS TOPPER -----");
-            st[tpr].display();
+            st[topperIdx].display();
+
+      
+            System.out.println("\n\nTotal Student:");
+            Student.totalStudent(st);
+
+            Student.convert(st);
+
+            System.out.println("\n\n Sort Student By its name ");
+            Student.sortStudent(st);
+
         }else{
             sc.close();
         }
-        
-        System.out.println("\n\nTotal Student:");
-        Student.TotalStudent(st);
-
+     
    }
 }
