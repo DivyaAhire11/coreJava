@@ -38,11 +38,11 @@ class Student{
         this.avg = this.total_marks / this.num_subjects;
     }
     public void display(){
-          System.out.println(roll +"\t\t"+ name +"\t\t"+ avg);
+          System.out.println(roll +"\t\t"+ name +"\t\t"+ avg+"%");
     }
 
     public String toString(){
-        return " "+this.roll+"\t\t"+this.name+"\t\t"+this.avg;
+        return " "+this.roll+"\t\t"+this.name+"\t\t"+this.avg+"%";
     }
 
     public static int searchStudent(Student st[],int x){
@@ -56,14 +56,16 @@ class Student{
         return loc;
     }
 
-    public static float Topper(Student st[]){
+    public static int Topper(Student st[]){
         int loc = -1;
         float max = st[0].avg;
         for(Student t : st){
-            if(max < t.avg)
+            if(max < t.avg){
                max = t.avg;
+               loc = t.roll;
+            }
         }
-        return max;
+        return loc;
     }
 }
 
@@ -98,11 +100,10 @@ class TestMyStudent{
         }
 
   
-        float topper;
-        topper = Student.Topper(st);
-        System.out.println("\n\n------TOPER -----");
-        
-        st[topper].display();
+        int topperIdx = Student.Topper(st);
+        int tpr = Student.searchStudent(st,topperIdx);
+        System.out.println("\n\n------ClASS TOPPER -----");
+        st[tpr].display();
 
 
         sc.close();
