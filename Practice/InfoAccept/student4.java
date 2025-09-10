@@ -6,6 +6,7 @@ class Student{
     private float total_marks;
     private int num_subjects;
     private float avg;
+    private static int count;
 
     public Student(){
         roll = 0;
@@ -21,6 +22,7 @@ class Student{
         this.total_marks = total_marks;
         this.num_subjects = num_subjects;
         this.avg = this.total_marks / this.num_subjects;
+        count++;
     }
 
     public void accept(){
@@ -36,6 +38,7 @@ class Student{
         num_subjects = sc.nextInt();
         
         this.avg = this.total_marks / this.num_subjects;
+        count++;
     }
     public void display(){
           System.out.println(roll +"\t\t"+ name +"\t\t"+ avg+"%");
@@ -67,7 +70,15 @@ class Student{
         }
         return loc;
     }
-}
+
+    public static void TotalStudent(Student st[]){
+        System.out.println("Total Students Of A Class is :"+count);
+    }
+ 
+ }
+
+
+
 
 class TestMyStudent{
    public static void main(String args[]){
@@ -101,7 +112,7 @@ class TestMyStudent{
 
         System.out.print("\nHey! You Want To see Topper Of Class (y/n) : ");
         String say = sc.next();
-        
+
         if(say.equalsIgnoreCase("y")){
             int topperIdx = Student.Topper(st);
             int tpr = Student.searchStudent(st,topperIdx);
@@ -110,7 +121,9 @@ class TestMyStudent{
         }else{
             sc.close();
         }
+        
+        System.out.println("\n\nTotal Student:");
+        Student.TotalStudent(st);
 
-      
    }
 }
