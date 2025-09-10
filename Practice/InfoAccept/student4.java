@@ -99,13 +99,18 @@ class TestMyStudent{
             st[l].display();
         }
 
-  
-        int topperIdx = Student.Topper(st);
-        int tpr = Student.searchStudent(st,topperIdx);
-        System.out.println("\n\n------ClASS TOPPER -----");
-        st[tpr].display();
+        System.out.print("\nHey! You Want To see Topper Of Class (y/n) : ");
+        String say = sc.next();
+        
+        if(say.equalsIgnoreCase("y")){
+            int topperIdx = Student.Topper(st);
+            int tpr = Student.searchStudent(st,topperIdx);
+            System.out.println("\n\n------ClASS TOPPER -----");
+            st[tpr].display();
+        }else{
+            sc.close();
+        }
 
-
-        sc.close();
+      
    }
 }
