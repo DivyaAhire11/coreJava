@@ -1,6 +1,6 @@
 package mainseries;
 
-import java.util.Scanner;
+import java.util.*;
 import series.*;
 // import series.SquareSeries;
 // import series.CubeSeries;
@@ -17,6 +17,7 @@ class TestSeries{
         CubeSeries.printSeries(n);
         EvenSeries.printSeries(n);
         FactorialSeries.printSeries(n);
-
+        PrimeSeries.printSeries(n);
+        FibonacciSeries.printSeries(n);
     }
 }

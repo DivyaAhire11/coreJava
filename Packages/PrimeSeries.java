@@ -2,7 +2,7 @@ package series;
 
 public class PrimeSeries {
     public static void printSeries(int x) {
-        System.out.println("\n----- Prime Series -----");
+        System.out.println("\n\n----- Prime Series -----");
         
         for (int i = 2; i <= x; i++) {
             boolean isPrime = true; // assume number is prime

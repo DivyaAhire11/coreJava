@@ -1,4 +1,4 @@
-
+//One File And Two Class
 import java.util.Scanner;
 
 class Square{
