@@ -10,13 +10,12 @@ class Square{
 
        public void printSquare(){
          for(int i = 1;i <= n; i++){
-            System.out.print(""+i+ " = "+(i*i)+"\t");
+            System.out.print((i*i)+"\t");
          }
        }  
-   
-   
-   
-    public static void main(String []args){
+}
+class TestSquare{
+ public static void main(String []args){
        Scanner sc = new Scanner(System.in);
        System.out.print("Enter Number :");
        int x = sc.nextInt();
@@ -24,8 +23,5 @@ class Square{
        Square ob = new Square(x);
        System.out.println("Square Serirs ");
        ob.printSquare();
-
-    }
-
-    
+ }
 }
