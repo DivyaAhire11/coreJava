@@ -1,8 +1,10 @@
 package mainseries;
 
 import java.util.Scanner;
-import series.SquareSeries;
-import series.CubeSeries;
+import series.*;
+// import series.SquareSeries;
+// import series.CubeSeries;
+// import series.EvenSeries;
 
 class TestSeries{
     public static void main(String[] args){
@@ -13,5 +15,8 @@ class TestSeries{
 
         SquareSeries.printSeries(n);
         CubeSeries.printSeries(n);
+        EvenSeries.printSeries(n);
+        FactorialSeries.printSeries(n);
+
     }
 }
