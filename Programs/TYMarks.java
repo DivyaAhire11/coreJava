@@ -1,4 +1,4 @@
-package TY;
+package ty;
 
 public class TYMarks{
     int theory;

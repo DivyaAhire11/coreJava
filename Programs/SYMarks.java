@@ -1,4 +1,4 @@
-package SY;
+package sy;
 
 public class SYMarks{
     int ctotal;
