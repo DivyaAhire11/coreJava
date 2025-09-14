@@ -10,15 +10,15 @@ public class Student{
     private SYMark s;
     private TYMark t;
     private int total;
-      
+    private String grade;
   
     public void accept(){
        BufferedReader b = new BufferedReader(new InputStreamReader(System.in));
        try{
-         System.out.println("Enter Roll Number:");
+         System.out.print("Enter Roll Number:");
          roll = Integer.parseInt(b.readLine());
 
-        System.out.println("Enter Name :");
+        System.out.print("Enter Name :");
         name = b.readLine();
 
         s = new SYMark();
@@ -31,13 +31,28 @@ public class Student{
 
        }catch(Exception e){}
     }
+       public String Grade(){
+        int tt = total/5;
+        if(tt >= 80)
+           grade = "A";
+        else if(tt >=65 && tt <80)
+           grade = "B";
+        else if(tt >= 50 && tt <65)
+           grade = "C";
+        else if(tt >= 35 && tt < 50)
+           grade = "D";
+        else
+           grade ="F";
+
+       return grade;
+           
+    }
     public void display(){
-        System.out.println("Roll Number :"+roll);
-        System.out.println("Name :"+name);
+        System.out.print(roll+"\t"+name);
         s.display();
         t.display();
-        System.out.print("Total is :"+total);
-      
-         
+        grade = Grade();
+        System.out.println("\t"+total+"\t"+grade); 
     }
+ 
 }

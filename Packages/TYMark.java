@@ -10,20 +10,17 @@ public class TYMark{
      public void accept(){
         BufferedReader b = new BufferedReader(new InputStreamReader(System.in));
        try{
-            System.out.println("Enter Theory marks :");
+            System.out.print("Enter Theory marks :");
             theory = Integer.parseInt(b.readLine());
 
-            System.out.println("Enter Practical marks :");
+            System.out.print("Enter Practical marks :");
             practical = Integer.parseInt(b.readLine());
 
             tytotal = theory  + practical;
         }catch(Exception e){}
      }
      public void display(){
-        // System.out.print("\t"+theory+"\t"+ practical +"\t");
-         System.out.println("Theory marks :"+theory);
-         System.out.println("Practical marks :"+practical);
-         
+        System.out.print("\t"+theory+"\t"+ practical +"\t");         
      }
      public int getTytotal(){
         return tytotal;
