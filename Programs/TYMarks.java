@@ -13,7 +13,8 @@ public class TYMarks{
         return (theory+practical);
     }
     public void display(){
-        System.out.println("Theory marks :"+theory);
-        System.out.println("Practical marks :"+practical);
+        // System.out.println("Theory marks :"+theory);
+        // System.out.println("Practical marks :"+practical);
+        System.out.println(theory+"\t\t"+practical);
     }
 }

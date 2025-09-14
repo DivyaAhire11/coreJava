@@ -15,8 +15,9 @@ public class SYMarks{
         return (ctotal+mtotal+etotal);
     }
     public void display(){
-        System.out.println("Computer Marks :"+ctotal);
-        System.out.println("Mathematic Marks :"+mtotal);
-        System.out.println("Electronic Marks :"+etotal);
+        // System.out.println("Computer Marks :"+ctotal);
+        // System.out.println("Mathematic Marks :"+mtotal);
+        // System.out.println("Electronic Marks :"+etotal);
+        System.out.println(ctotal + "\t\t\t"+ mtotal+"\t\t\t"+etotal);
     }
 }

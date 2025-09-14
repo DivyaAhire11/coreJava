@@ -1,39 +1,43 @@
-package Package;
+package pkg;
+
 import java.util.Scanner;
-import SY.*;
-import TY.*;
+import sy.*;
+import ty.*;
 
 public class Stud{
     int roll;
     String name;
-    SYMarks o1;
-    TYMarks o2;
+    SYMarks ob1; //reference of sy
+    TYMarks ob2; //reference of ty
 
     Stud(int roll,String name){
         this.roll = roll;
         this.name = name;
+          
+        int compMks,mathMks,eleMks,theoryMks,practMks;
 
         Scanner sc = new Scanner(System.in);
+
         System.out.print("Enter Computer Total marks :");
-        int c = sc.nextInt();
+        compMks = sc.nextInt();
         System.out.print("Enter Mathematics total Marks");
-        int m = sc.nextInt();
+        mathMks = sc.nextInt();
         System.out.print("Enter Electronic total Marks");
-        int e = sc.nextInt();
+        eleMks = sc.nextInt();
         
-        o1 = new SYMarks(c,m,e);
+        ob1 = new SYMarks(compMks,mathMks,eleMks); //object and(parameterized constructor call)
 
         System.out.print("Enter Theory Marks :");
-        int t = sc.nextInt();
+        theoryMks = sc.nextInt();
         System.out.print("Enter Practical Marks :");
-        int p = sc.nextInt();
+        practMks = sc.nextInt();
 
-        o2 = new TYMarks(t,p);
+        ob2 = new TYMarks(theoryMks,practMks); //object and(parameterized constructor call)
     }
 
     void grade(){
 
-        int gt = o1.sytotal()+o2.tytotal();
+        int gt = ob1.sytotal()+ob2.tytotal();
         double per = gt/5;
          if(per >= 75)
             System.out.println("Distinction!!!");
@@ -47,28 +51,32 @@ public class Stud{
    
    public static void main(String args[]){
     Scanner s = new Scanner(System.in);
+    int n,roll;
+    String nm;
+
     System.out.print("Enter How Many students : ");
-    int n = s.nextInt();
+    n = s.nextInt();
 
     Stud a[] = new Stud[n];
     for(int i=0;i<n;i++){
        System.out.print("Enter ROLL NO : ");
-       int r = s.nextInt();
+       roll = s.nextInt();
        System.out.print("Enter NAME : ");
-       String nm = s.next();
+       nm = s.next();
 
-       a[i] = new Stud(r,nm);
+       a[i] = new Stud(roll,nm);
     }
     System.out.println("\n Details Are ==> \n");
     for(int i=0;i<n;i++){
-        a[i].o1.display();
-        a[i].o2.display();
+      System.out.println("Computer Marks   Mathematic Marks  Electronic Marks ");
+        a[i].ob1.display();
+      System.out.println("Theory marks   Practical marks");
+       a[i].ob2.display();
+       System.out.println("\n");
         a[i].grade();
-    }
+      System.out.println("\n");
 
+    }
    }
    
 } 
-//RUN     
-//C:\Users\DELL-PC\Desktop\CoreJava\Programs> javac Package\Stud.java
-//C:\Users\DELL-PC\Desktop\CoreJava\Programs> java Package.Stud
