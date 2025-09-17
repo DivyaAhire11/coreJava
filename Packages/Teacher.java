@@ -21,4 +21,9 @@ public class Teacher{
     public void disp(){
         System.out.println(TID+"\t\t"+TName+"\t\t"+Subject);
     }
+    // @Override
+    // protected void finalize() throws Throwable{
+    //     System.out.println("Finalizing Teacher Object :"+TName);
+    //     super.finalize();
+    // }
 }

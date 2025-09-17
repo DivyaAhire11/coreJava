@@ -43,6 +43,11 @@ class TeacherStudentDetail{
             tc[i].disp();
             break;
         }
+        }else{
+            System.out.println("There is no Java Teacher!");
         }
  }
+    // st = null;
+    // tc = null;
+    // System.gc();
 }

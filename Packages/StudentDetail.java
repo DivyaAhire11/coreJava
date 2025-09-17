@@ -20,4 +20,9 @@ public class StudentDetail{
     public void disp(){
         System.out.println(Rno+"\t\t"+SName+"\t\t"+Per);
     }
+    // @Override
+    // protected void finalize() throws Throwable{
+    //     System.out.println("Finalizing Student Object :"+SName);
+    //     super.finalize();
+    // }
 }
