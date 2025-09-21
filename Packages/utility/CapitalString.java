@@ -9,19 +9,24 @@ class CapitalString{
         System.out.print("Enter Your Full Name : ");
         name = s.nextLine();  
     }
-    public void Capitalized(){
+    public String[] Capitalized(){
         String[] b = name.split(" "); 
-        for(String cs : b){
-            String x = cs.substring(0,1).toUpperCase()+cs.substring(1).toLowerCase();
-              System.out.print(x+" ");
+        String x[] = new String[b.length];
+        for(int i=0 ;i<b.length;i++){
+             x[i] = b[i].substring(0,1).toUpperCase() + b[i].substring(1).toLowerCase();
         }
-              
+           return x;     
     }
 
     public static void main(String args[]){
         CapitalString cs = new CapitalString();
         cs.accept();
-        cs.Capitalized();
+        String x[] = new String[10];
+        x = cs.Capitalized();
+        System.out.print("Capitalized Name : ");
+        for(String t : x){
+            System.out.print(t+" ");
+        }
     }
     public void display(){
        System.out.println(name);
