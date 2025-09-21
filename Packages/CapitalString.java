@@ -10,8 +10,12 @@ class CapitalString{
         name = s.nextLine();  
     }
     public void Capitalized(){
-        String[] b = name.split(" ", 0); 
-        System.out.println(b[0]+"\n"+b[1]+"\n"+b[2]);
+        String[] b = name.split(" "); 
+        for(String cs : b){
+            String x = cs.substring(0,1).toUpperCase()+cs.substring(1).toLowerCase();
+              System.out.print(x+" ");
+        }
+              
     }
 
     public static void main(String args[]){
