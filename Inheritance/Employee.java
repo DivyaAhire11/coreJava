@@ -16,4 +16,7 @@ class Employee{
     public void display(){
         System.out.print(id +"\t\t"+ name +"\t\t"+ dept +"\t\t"+ salary+"\t\t");
     }
+    public float getSalary(){
+        return salary;
+    }
 }

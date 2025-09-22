@@ -25,9 +25,14 @@ class ManagerInfo{
            
         }
         
-         System.out.println("ID\t\tNAME\t\tDAPARTMENT\tSALARY\t\tBONUS");
+         System.out.println("ID\t\tNAME\t\tDAPARTMENT\tSALARY\t\tBONUS\t\tTOTAL");
          for(i = 0;i < mr.length; i++){
             mr[i].display();
          }
+
+         System.out.println("Highest Salary Of Manager are as Follow");
+         int l;
+         l = Manager.total(mr);
+         mr[l].display();
     }
 }
