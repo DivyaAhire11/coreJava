@@ -1,7 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-class MyFrame2 extends JFrame{
+class MyFrame2 extends JFrame implements ActionListener{
       JLabel l1,l2,l3;
       JTextField tf1,tf2,tf3;
       JButton b1,b2,b3,b4;
@@ -36,8 +37,33 @@ class MyFrame2 extends JFrame{
         add(b3);
         add(b4);
       
+        //Event
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
+        b4.addActionListener(this);
+       
         setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      }
+      public void actionPerformed(ActionEvent ae){
+          int a,b,c=0;
+          a = Integer.parseInt(tf1.getText());
+          b = Integer.parseInt(tf2.getText());
+          if(ae.getSource() == b1){
+            c = a+b;
+          }
+          if(ae.getSource() == b2){
+            c = a-b;
+          }
+          if(ae.getSource() == b3){
+            c = a*b;
+          }
+          if(ae.getSource() == b4){
+            c = a/b;
+          }
 
+          tf3.setText(""+c);
       }
 }
 class TestFrame2{
