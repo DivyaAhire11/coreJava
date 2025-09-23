@@ -1,8 +1,9 @@
 import java.awt.*;
+import java.awt.event.*;
 
-class Subjects extends Frame{
+class Subjects extends Frame implements ActionListener{
       Label l1;
-      Checkbox cb1,cb2,cb3,cb4;
+      Checkbox cb[];
       Button b;
       TextField tf;
       Subjects(){
@@ -10,23 +11,37 @@ class Subjects extends Frame{
           setTitle("Subjects GUI PROGRAM");
           setLayout(new FlowLayout());
           l1 = new Label("Choose Your Subjects");
-          cb1 = new Checkbox("PHP");
-          cb2 = new Checkbox("JAVA");
-          cb3 = new Checkbox("PYTHON");
-          cb4 = new Checkbox("C");
+          cb = new Checkbox[4];
+
+          cb[0] = new Checkbox("PHP");
+          cb[1]= new Checkbox("JAVA");
+          cb[2]= new Checkbox("PYTHON");
+          cb[3]= new Checkbox("C");
+
           b = new Button("OKK");
           tf = new TextField(20);
           tf.setEditable(false);
 
           add(l1);
-          add(cb1);
-          add(cb2);
-          add(cb3);
-          add(cb4);
+         for(int i = 0;i<4;i++){
+            add(cb[i]);
+         }
           add(b);
           add(tf);
 
+          b.addActionListener(this);
+          
           setVisible(true);
+      }
+      public void actionPerformed(ActionEvent ae){
+           String msg = "";
+           for(int i=0;i<4;i++){
+            if(cb[i].getState()){
+               msg += cb[i].getLabel();
+              }
+           }
+           
+          tf.setText(msg);
       }
 }
 class TestMain{
