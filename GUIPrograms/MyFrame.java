@@ -46,7 +46,7 @@ class MyFrame extends Frame implements ActionListener{
         b4.addActionListener(this);
        
         setVisible(true);
-      
+     
       }
     public void actionPerformed(ActionEvent ae){
          int a,b,c=0;

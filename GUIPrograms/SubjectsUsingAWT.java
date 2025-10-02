@@ -9,7 +9,7 @@ class Subjects extends Frame implements ActionListener{
       Subjects(){
           setBounds(500,200,400,400);
           setTitle("Subjects GUI PROGRAM");
-          setLayout(new FlowLayout());
+           setLayout(new FlowLayout());
           l1 = new Label("Choose Your Subjects");
           cb = new Checkbox[4];
 
@@ -32,6 +32,7 @@ class Subjects extends Frame implements ActionListener{
           b.addActionListener(this);
           
           setVisible(true);
+        
       }
       public void actionPerformed(ActionEvent ae){
            String msg = "";
