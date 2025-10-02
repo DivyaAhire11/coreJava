@@ -5,8 +5,8 @@ class Vehicle{
     private float price;
 
     public void accept(){
-         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
          try{
+          BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
            System.out.print("Enter Company Name : ");
            company = br.readLine();
            System.out.print("Enter Price : ");
