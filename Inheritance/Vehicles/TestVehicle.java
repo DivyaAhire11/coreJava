@@ -3,13 +3,13 @@ import java.util.Scanner;
 class TestVehicle{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        int n,i,ch;
+        int n,i=0,ch;
         System.out.print("Enter Numbers Of Vehicles :");
         n = sc.nextInt();
 
          Vehicle v [] = new Vehicle[n];
        
-         for(i=0;i<v.length;i++){
+         while(true){
               System.out.println("1.LMV");
               System.out.println("2.HMV");
               System.out.print("Enter Choice : ");
@@ -17,18 +17,37 @@ class TestVehicle{
             if(ch == 1){
                 v[i] = new LMV();
                 v[i].accept();
+                i++;
+                n--;
             }else if(ch == 2){
                 v[i] = new HMV();
                 v[i].accept();
+                i++;
+                n--;
             }else{
                 System.out.println("Invalid Choice");
             }
+      
+            if(n==0)
+              break;
+
             }
             System.out.println("COMPANY\t\tPRICE\t\tCAPACITY/MILEAGE");
             for(Vehicle vv : v){
                 vv.display();
             }
-
+      
+      
+            System.out.println("\nONLY LMV DATA");
+            for(i=0;i<v.length;i++){
+            if(v[i] instanceof LMV){
+                v[i].display();
+             }
+            }
+      
+      
+      
+      
        /* ONLT ACCEPTING VEHICLE INFO
         Vehicle v[] = new Vehicle[n]; //array of reference
         for(i=0;i<n;i++){
