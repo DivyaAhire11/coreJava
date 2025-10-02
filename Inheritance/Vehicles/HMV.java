@@ -3,7 +3,7 @@ class HMV extends Vehicle{
     private float capacity;
 
     public void accept(){
-        super.accept();
+       super.accept();
        Scanner sc = new Scanner(System.in);
        System.out.print("Enter Capacity-in-tons : ");
        capacity = sc.nextFloat();

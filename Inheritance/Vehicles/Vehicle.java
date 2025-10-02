@@ -1,20 +1,15 @@
-import java.io.*;
+import java.util.*;
 
 class Vehicle{
     private String company;
     private float price;
 
     public void accept(){
-         try{
-          BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+           Scanner sc = new Scanner(System.in);
            System.out.print("Enter Company Name : ");
-           company = br.readLine();
+           company = sc.next();
            System.out.print("Enter Price : ");
-           price = Float.parseFloat(br.readLine());
-
-         }catch(IOException e){
-            System.out.print(e);
-         }
+           price = sc.nextFloat();
     }
     public void display(){
         System.out.print(company+"\t\t"+price+"\t\t");
