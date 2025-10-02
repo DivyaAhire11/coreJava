@@ -4,6 +4,11 @@ class Vehicle{
     private String company;
     private float price;
 
+    public Vehicle(String company,float price){
+        this.company = company;
+        this.price = price;
+    }
+
     public void accept(){
            Scanner sc = new Scanner(System.in);
            System.out.print("Enter Company Name : ");

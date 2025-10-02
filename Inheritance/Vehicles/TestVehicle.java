@@ -3,25 +3,34 @@ import java.util.Scanner;
 class TestVehicle{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
-        int n,i=0,ch;
+        int n,i=0;
+        String ch,cmp;
+        float p,m,c;
         System.out.print("Enter Numbers Of Vehicles :");
         n = sc.nextInt();
 
          Vehicle v [] = new Vehicle[n];
        
          while(true){
-              System.out.println("1.LMV");
-              System.out.println("2.HMV");
-              System.out.print("Enter Choice : ");
-            ch = sc.nextInt();
-            if(ch == 1){
-                v[i] = new LMV();
-                v[i].accept();
+            
+              System.out.print("Enter Company :");
+              cmp = sc.next();
+              System.out.print("Enter Price : ");
+              p = sc.nextFloat();
+              System.out.print("Which Type of Vehicle(lmv/hmv) : ");
+              ch = sc.next();
+            if(ch.equalsIgnoreCase("lmv")){
+                System.out.print("Enter Mileage :");
+                m = sc.nextFloat();
+                v[i] = new LMV(cmp,p,m);
+                // v[i].accept();
                 i++;
                 n--;
-            }else if(ch == 2){
-                v[i] = new HMV();
-                v[i].accept();
+            }else if(ch.equalsIgnoreCase("hmv")){
+                 System.out.print("Enter Capacity-in-tons :");
+                 c = sc.nextFloat();
+                v[i] = new HMV(cmp,p,c);
+                // v[i].accept();
                 i++;
                 n--;
             }else{
@@ -32,20 +41,26 @@ class TestVehicle{
               break;
 
             }
-            System.out.println("COMPANY\t\tPRICE\t\tCAPACITY/MILEAGE");
+            
+            System.out.println("\nCOMPANY\t\tPRICE\t\tCAPACITY/MILEAGE");
             for(Vehicle vv : v){
                 vv.display();
             }
       
       
-            System.out.println("\nONLY LMV DATA");
+            System.out.println("\n----------ONLY LMV DATA-------");
             for(i=0;i<v.length;i++){
             if(v[i] instanceof LMV){
                 v[i].display();
              }
             }
       
-      
+            System.out.println("\n-----------ONLY HMV DATA----------");
+            for(i=0;i<v.length;i++){
+            if(v[i] instanceof HMV){
+                v[i].display();
+             }
+            }
       
       
        /* ONLT ACCEPTING VEHICLE INFO

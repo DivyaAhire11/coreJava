@@ -2,6 +2,10 @@ import java.util.Scanner;
 class HMV extends Vehicle{
     private float capacity;
 
+     public HMV(String c ,float p,float capacity){
+        super(c,p);
+        this.capacity= capacity;
+    }
     public void accept(){
        super.accept();
        Scanner sc = new Scanner(System.in);

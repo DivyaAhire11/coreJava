@@ -3,6 +3,10 @@ import java.util.*;
 class LMV extends Vehicle{
     private float mileage;
 
+    public LMV(String c ,float p,float mileage){
+        super(c,p);
+        this.mileage= mileage;
+    }
     public void accept(){
         super.accept();
         Scanner s = new Scanner(System.in);
