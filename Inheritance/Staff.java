@@ -1,5 +1,4 @@
-
-class Staff{
+abstract class Staff{
    protected int id;
    protected String name;
 
