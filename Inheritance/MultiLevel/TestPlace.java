@@ -4,17 +4,26 @@ class TestPlace{
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
         int n,i;
+        String st,ctry,cnt;
         System.out.print("Enter Number of Places : ");
         n = sc.nextInt();
            
-        Continent c[] = new Continent[n];
-        for(i=0;i<c.length;i++){
-            c[i] = new State();
-            c[i].accept();
+        State s[] = new State[n];
+       
+        for(i=0;i<s.length;i++){
+            System.out.print("Enter Continent : ");
+            ctry = sc.next();
+            System.out.print("Enter Country : ");
+            cnt = sc.next();
+            System.out.print("Enter State : ");
+            st = sc.next();
+
+            s[i] = new State(ctry,cnt,st);
+            // s[i].accept();
         }
-        System.out.println("STATE\t\tCOUNTRY\t\tCONTINENT");
-          for(i=0;i<c.length;i++){
-            c[i].display();
+        System.out.println("CONTINENT\tCOUNTRY\t\tSTATE");
+          for(i=0;i<s.length;i++){
+            s[i].display();
         }
        
        

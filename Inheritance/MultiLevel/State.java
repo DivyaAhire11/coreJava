@@ -2,16 +2,20 @@
 import java.util.Scanner;
 
 class State extends Country{
-    private String State;
+    private String state;
 
+    public State(String ctnt,String ctry ,String st){
+        super(ctnt,ctry);
+        this.state = st;
+    }
     public void accept(){
         super.accept();
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter State : ");
-        State = sc.next();
+        state = sc.next();
     }
     public void display(){
-        System.out.print(State+"\t\t");
         super.display();
+        System.out.println(state);
     }
 }
