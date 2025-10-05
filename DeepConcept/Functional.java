@@ -9,11 +9,7 @@ class B implements A{
         System.out.println("Hello");
     }
 }
-class C implements A{
-    public void m1(){
-        System.out.println("Good Day");
-    }
-}
+
 class D extends B{
      void m2(){
         System.out.println("Good BYE");
@@ -24,7 +20,11 @@ class Testing{
         A ob = new B();
         ob.m1(); // Hello
      
-        A ob1 = new C();
+        A ob1 = new A(){         //Testing$1.class
+           public void m1(){
+              System.out.println("Good Day");
+           }
+        };
         ob1.m1(); // Good Day
         
         B ob2 = new D();
