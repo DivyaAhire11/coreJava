@@ -30,7 +30,7 @@ class Test{
         ob1.m1();
         ob1.m2();
 
-        A ob2 = new A(){
+        A ob2 = new A(){       //Test$1.class
              public void m1(){
                   System.out.println("m1() of Class Without Name");
              }
@@ -41,7 +41,7 @@ class Test{
         ob2.m1();
         ob2.m2();
 
-        B ob3 = new B(){
+        B ob3 = new B(){         //Test$2.class
             public void m1(){
                 System.out.println("HIIIII");
             }
