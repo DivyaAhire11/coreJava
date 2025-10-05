@@ -1,7 +1,4 @@
-//area = (pi X r X l) + (pi x r x r)
-//volume = (1/3)  X PI X r X r X h
-
-class Cone extends Shape{
+class Cone implements Shape{
      double r;
      double l;
      double h;
@@ -9,11 +6,11 @@ class Cone extends Shape{
     
     public void accept(){
         System.out.print("Enter Radius :");
-        r = sc.nextInt();
+        r = sc.nextDouble();
         System.out.print("Enter Slant height :");
-        l = sc.nextInt();
+        l = sc.nextDouble();
         System.out.print("Enter Height :");
-        h = sc.nextInt();
+        h = sc.nextDouble();
      }
 
     public void area(){

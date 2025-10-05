@@ -1,12 +1,9 @@
-//area = 4 X pi X r X r
-//volume = 4 X PI X r X r X r
-
-class Sphere extends Shape{
+class Sphere implements Shape{
     double r;
 
     public void accept(){
         System.out.print("Enter Radius :");
-        r = sc.nextInt();
+        r = sc.nextDouble();
      }
     public void area(){
        double a;

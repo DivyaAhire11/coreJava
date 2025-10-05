@@ -1,19 +1,15 @@
-// vol = l*b*h
-// A = 2(lb + bh + lh)
-
-
-class Box extends Shape{
+class Box implements Shape{
      double l;
      double b;
      double h;
   
      public void accept(){
         System.out.print("Enter Slant height :");
-        l = sc.nextInt();
+        l = sc.nextDouble();
         System.out.print("Enter Breath :");
-        b = sc.nextInt();
+        b = sc.nextDouble();
          System.out.print("Enter Height :");
-        h = sc.nextInt();
+        h = sc.nextDouble();
      }
 
     public void area(){
