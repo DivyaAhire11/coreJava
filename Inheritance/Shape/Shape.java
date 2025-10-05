@@ -1,6 +1,9 @@
+import java.util.Scanner;
 
-abstract class Shape{
+interface Shape{
     double PI = 3.14;
-    abstract void area();
-    abstract void volume();
+    Scanner sc = new Scanner(System.in);
+    void area();
+    void volume();
+    void accept();   
 }
