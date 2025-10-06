@@ -6,8 +6,8 @@ class MyFile{
         char ch1;
         if(args.length == 2){
             try{
-                FileReader fr = new FileReader(args[0]);
-                FileWriter fw = new FileWriter(args[1]);
+                FileReader fr = new FileReader(args[0]); //pass file name source
+                FileWriter fw = new FileWriter(args[1]); //book1.txt
 
                 while((ch = fr.read()) != -1){
                     ch1 = (char)ch;
