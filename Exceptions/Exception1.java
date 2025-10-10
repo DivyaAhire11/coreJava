@@ -1,7 +1,6 @@
 import java.util.*;
 
-class MyArithmeticException extends Exception{
-   //if I never Written toString() then it goes to its superclass toString 
+//if I never Written toString() then it goes to its superclass toString 
    //superclass is Exception 
    //Exception : toString return : name of subclass
    // output ==>
@@ -9,6 +8,8 @@ class MyArithmeticException extends Exception{
    // Enter Second Number : 0
    // MyArithmeticException
    // EXIT OF MAIN METHOD
+
+class MyArithmeticException extends Exception{
 }
 
 class Test{
