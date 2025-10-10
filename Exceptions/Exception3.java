@@ -31,5 +31,7 @@ class Demo {
         for (int t : a) {
             System.out.println(t);
         }
+
+          System.out.println("EXIT OF MAIN METHOD");
     }
 }
