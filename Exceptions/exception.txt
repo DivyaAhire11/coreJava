@@ -1,0 +1,30 @@
+Exception And Error
+
+1) Both Are “Throwable”
+2) java.lang.Object
+   ↳ java.lang.Throwable
+          ↳ java.lang.Exception
+          ↳ java.lang.Error
+
+
+Exception   :                          
+       1. Problems that occur during program execution,usually due to bad input or logic that you can fix.
+       2. must handle it using try–catch or throws.
+       3. Examples = NullPointerException, ArithmeticException, IOException, InputMismatchException
+       4. Thrown By : Your code or Java libraries
+      
+Error :
+       1. Serious problems that occur in the JVM (Java Virtual Machine) itself — not under the programmer’s control.
+       2. program should not try to handle it.
+       3. Examples = OutOfMemoryError, StackOverflowError, VirtualMachineError
+       4. Thrown By : The JVM
+
+
+
+     #  Checked Exception
+         1. Checked at compile time
+         2. IOException, SQLException
+
+     #  Unchecked Exception
+        1. Occur at runtime
+        2. ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException
