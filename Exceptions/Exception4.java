@@ -7,12 +7,12 @@ class Demo {
         int a[] = new int[10];
         try{
              System.out.print("Enter First Number : ");
-             x = sc.nextInt();
+             x = sc.nextInt();  //throw new InputMismatchException()
 
              System.out.print("Enter Index: ");
-             index = sc.nextInt();
+             index = sc.nextInt(); 
 
-             a[index] = x;
+             a[index] = x; //throw new ArrayIndexOutOfBoundsException()
       
         }catch (InputMismatchException ime){
             System.out.println(ime);

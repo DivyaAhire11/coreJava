@@ -18,7 +18,7 @@ class Demo{
           if(b == 0){
              throw new MyArithmeticException();
           }else{
-             c = a/b;
+             c = a/b;  
              System.out.println("Result is : "+c);  
           }
         }catch(MyArithmeticException ae){

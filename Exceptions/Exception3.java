@@ -8,22 +8,22 @@ class Demo {
 
         System.out.print("Enter First Number : ");
         try {
-            x = sc.nextInt();
-        } catch (InputMismatchException ime) {
+            x = sc.nextInt();   //throw new InputMismatchException()
+        } catch (InputMismatchException ime) {  
             System.out.println("Invalid input for number: " + ime);
             sc.next(); // clear invalid token
         }
 
         System.out.print("Enter Index : ");
         try {
-            index = sc.nextInt();
+            index = sc.nextInt(); //throw new InputMismatchException()
         } catch (InputMismatchException ime) {
             System.out.println("Invalid input for index: " + ime);
             sc.next(); // clear invalid token
         }
 
         try {
-            a[index] = x;
+            a[index] = x;   //throw new ArrayIndexOutOfBoundsException()
         } catch (ArrayIndexOutOfBoundsException aiob) {
             System.out.println(aiob);
         }
