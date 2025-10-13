@@ -17,10 +17,23 @@ class MyFile{
                 System.out.println(args[0]+" IS a Directory");
                 String[] content = f.list();
                 System.out.println("------DIRECTORY CONTENT ------");
-                for(String c:content)
+                for(String c:content){
                      System.out.println(c);
-               }
-                
+                }
+                System.out.println("\n-----TXT FILES----");
+                 int cnt=0;
+                 for(String c:content){
+                    if(c.endsWith("txt")){
+                      System.out.println(c);
+                      cnt++;
+                  }
+                }
+                System.out.println("\nTotal Number OF TXT files : "+cnt);
+               
+              
+                }
+               
+              
             }else{
                  System.out.println("Pass One File as an Argument.");
             }
