@@ -14,6 +14,7 @@ public class Question1 {
             arr[i] = r.nextInt(100);
         }
 
+        System.out.println("All Numbers are as follows : ");
         for (int t : arr)
             System.err.print(t + "\t");
 
@@ -27,8 +28,15 @@ public class Question1 {
                 secMin = arr[i];
             }
         }
+      
+        if(secMin == Integer.MAX_VALUE){
+         System.out.println("\n There is no second smallest number");
+        }else{
+              System.out.println("\nSmallest Number : " + min);
+        System.out.println("Second Smallest Number : " + secMin);
+        }
 
-        System.out.println("\nmin : " + min);
-        System.out.println("Second min : " + secMin);
+
+      
     }
 }
